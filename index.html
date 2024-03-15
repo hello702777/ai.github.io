@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neutral Nebula Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .results {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+        }
+
+        .result-item a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Neutral Nebula Search</h1>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search the web">
+        <button class="search-button">Search</button>
+    </div>
+
+    <ul class="results">
+        </ul>
+
+    <script>
+        // This code is a simplified placeholder and needs further development
+        // to implement actual search functionality.
+        const searchButton = document.querySelector('.search-button');
+        searchButton.addEventListener('click', function() {
+            const searchInput = document.querySelector('.search-input');
+            const searchTerm = searchInput.value;
+
+            // **Important Note:** Due to security constraints and the limitations
+            // of CodePen (or any similar platform), directly fetching data from
+            // external websites (like Google Search) is not possible.
+
+            // **Placeholder logic for demonstration purposes only:**
+            const resultsList = document.querySelector('.results');
+            resultsList.innerHTML = ''; // Clear previous results
+
+            // Simulate results (replace with actual search implementation)
+            const mockResults = [
+                { title: 'Result 1 for ' + searchTerm, url: '#' },
+                { title: 'Result 2 for ' + searchTerm, url: '#' }
+            ];
+
+            for (const result of mockResults) {
+                const resultItem = document.createElement('li');
+                resultItem.classList.add('result-item');
+
+                const resultLink = document.createElement('a');
+                resultLink.textContent = result.title;
+                resultLink.href = result.url;
+
+                resultItem.appendChild(resultLink);
+                resultsList.appendChild(resultItem);
+            }
+        });
+    </script>
+</body>
+</html>
